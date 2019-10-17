@@ -26,11 +26,19 @@ $( document ).ready(function() {
                         || passed_month != today.getMonth()
                     ) 
                         && iter_date < today) {						
-                    var m = '<div><div class="past-date date_pos">';
+                    var m = '<div class="past-date">';
+                    var current = false;
                 } else {
-                    var m = checkToday(iter_date)?'<div><div class="today date_pos">':"<div><div class='date_pos'>";
+                    var m = checkToday(iter_date)?'<div class="tooltip" data-toggle="tooltip" data-placement="top" title="Price:$500"><div class="today date_pos">':"<div class='show_details' data-toggle='tooltip' data-placement='top' title='Price:$400'><div class='date_pos'>";
+                    var current = true;
                 }
-                calendar.datesBody.append(m + shownDate + "</div><div class='price_pos'>$500</div></div>");
+
+                if (current){
+                    calendar.datesBody.append(m + shownDate + "</div><div class='price_pos'>$500</div></div>");
+                }else{
+                    calendar.datesBody.append(m + shownDate + "</div>");
+                }
+                
             }
         }
 
@@ -156,4 +164,5 @@ $( document ).ready(function() {
         console.log("checking");
     });
 
+    $('.show_details').tooltip();
 });

@@ -76,6 +76,10 @@
   .calendar_content div.past-date {
     cursor: initial;
     color: #d5d5d5;
+    padding-top: 7px;
+  }
+  .calendar_content div.past-date:hover {
+    border: none;
   }
   .calendar_content div.today{
     font-weight: bold;
