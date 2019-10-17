@@ -29,7 +29,7 @@ $( document ).ready(function() {
                     var m = '<div class="past-date">';
                     var current = false;
                 } else {
-                    var m = checkToday(iter_date)?'<div class="tooltip" data-toggle="tooltip" data-placement="top" title="Price:$500"><div class="today date_pos">':"<div class='show_details' data-toggle='tooltip' data-placement='top' title='Price:$400'><div class='date_pos'>";
+                    var m = checkToday(iter_date)?'<div class="show_details" data-toggle="tooltip" data-placement="top" title="Price:$500"><div class="today date_pos">':"<div class='show_details' data-toggle='tooltip' data-placement='top' title='Price:$400'><div class='date_pos'>";
                     var current = true;
                 }
 
@@ -161,6 +161,7 @@ $( document ).ready(function() {
             generateCalendars("previous");
         } else { generateCalendars("next"); }
         clickedElement = bothCals.find(".calendar_content").find("div");
+        $('.show_details').tooltip();
         console.log("checking");
     });
 
