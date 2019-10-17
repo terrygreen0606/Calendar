@@ -1,3 +1,7 @@
+.heading {
+  text-align: center;
+}
+
 .calendar-section {
     margin-bottom: 20px;
   }
@@ -30,7 +34,7 @@
       display: table;
       clear: both;
   }
-  .calendar_weekdays div, .calendar_content div {
+  .calendar_weekdays div {
     /*border: 1px dotted #999;*/
     width: 14.28571%;
     height: 68px;
@@ -39,18 +43,27 @@
     text-align: center;
     background-color: transparent;
   }
+
+  .calendar_content div {
+    width: 14.4%;
+    height: 68px;
+    /* line-height: 69px;   */
+    overflow: hidden;
+    text-align: center;
+    background-color: transparent;
+  }
   
   .calendar_content .today {
-      color: #3B8FC7;
+    color: #3B8FC7;
   }
   .calendar_content div {
     float: left;
-      margin-left: -1px;
-      margin-top: -1px;
+    margin-left: -1px;
+    margin-top: -1px;
     border: 1px solid transparent;
   }
   .calendar_content div:hover {
-    border: 1px solid #777;
+    border: 1px solid #3B8FC7;
     /*line-height: 68px;*/
     cursor: pointer;
   }
@@ -61,7 +74,7 @@
   }
   
   .calendar_content div.past-date {
-      cursor: initial;
+    cursor: initial;
     color: #d5d5d5;
   }
   .calendar_content div.today{
@@ -106,4 +119,25 @@
   .calendar_header h2 {
     color: #409EDD;
     line-height: 1.7;
+  }
+
+  .calendar_content .date_pos {
+    width: 100%;
+    height: 50%;
+    padding-top: 5px;
+  }
+
+  .calendar_content .price_pos {
+    width: 100%;
+    height: 50%;
+    padding-top: 5px;
+    color: rgb(219, 134, 65);
+  }
+
+  .calendar_content .price_pos:hover {
+    border: none;
+  }
+
+  .calendar_content .date_pos:hover {
+    border: none;
   }

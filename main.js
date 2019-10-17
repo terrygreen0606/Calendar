@@ -26,11 +26,11 @@ $( document ).ready(function() {
                         || passed_month != today.getMonth()
                     ) 
                         && iter_date < today) {						
-                    var m = '<div class="past-date">';
+                    var m = '<div><div class="past-date date_pos">';
                 } else {
-                    var m = checkToday(iter_date)?'<div class="today">':"<div>";
+                    var m = checkToday(iter_date)?'<div><div class="today date_pos">':"<div><div class='date_pos'>";
                 }
-                calendar.datesBody.append(m + shownDate + "</div>");
+                calendar.datesBody.append(m + shownDate + "</div><div class='price_pos'>$500</div></div>");
             }
         }
 
